@@ -22,4 +22,73 @@ button {
       box-shadow: var(--shadow-blur);
       filter: blur(var(--text-blur));
   }
+
+}
+label {
+  font-size: var(--font-size-md);
+  line-height: var(--font-height-md);
+  font-weight: 100;
+  position: relative;
+  > div {
+    transition: all .5 ease-in-out;
+    position: absolute;
+    bottom: 5px;
+  }
+  &.error {
+    input, span {
+      color: var(--color-error);
+    }
+  }
+}
+input {
+  font-size: var(--font-size-md);
+  border: none;
+  font-weight: 100;
+  border-bottom: solid 1px var(--color-brand);
+  color: var(--color-brand);
+  background-color: transparent;
+  &[type="tel"] {
+    color: transparent;
+  }
+  &:focus,
+  &.active {
+    color: var(--color-brand);
+    + div {
+      top: calc(-1 * var(--space-middle));
+      bottom: auto;
+    }
+  }
+}
+.error-message {
+  font-size: var(--font-size-sm);
+  display: block;
+  line-height: var(--font-size-sm);
+}
+.close {
+  width: var(--font-size-md);
+  height: var(--font-size-md);
+  position: relative;
+  &:after,
+  &:before {
+    transform-origin: center center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &:after {
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: var(--color-brand);
+    transform: rotate(45deg);
+
+  }
+  &:before {
+    width: 100%;
+    height: 1px;
+    content: '';
+    background-color: var(--color-brand);
+    transform: rotate(135deg);
+
+  }
 }

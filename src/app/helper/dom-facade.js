@@ -30,7 +30,12 @@ function DomQuery(target) {
  */
 
 DomQuery.prototype.find = function(targets) {
-	return this.target.querySelectorAll(targets);
+	const el = this.target.querySelectorAll(targets);
+	if(el.length === 0){
+		throw "Invalid selector!";
+		return false
+	}
+	return el.length === 1 ? el[0] : el;
 };
 
 /**
@@ -41,6 +46,10 @@ DomQuery.prototype.find = function(targets) {
  */
 DomQuery.prototype.insertHtmlInsideTop = function(templates) {
 	this.target.insertAdjacentHTML('afterbegin', templates);
+	return this;
+};
+DomQuery.prototype.insertHtmlInsideBottom = function(templates) {
+	this.target.insertAdjacentHTML('beforeend', templates);
 	return this;
 };
 export default $;

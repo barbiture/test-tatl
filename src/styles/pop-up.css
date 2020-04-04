@@ -3,6 +3,29 @@
 	top: 0;
 	left: 0;
 	background-color: var(--color-white-opacity);
-	height: 20vh;
+	height: 100vh;
 	width: 100vw;
+	form {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 0 var(--space-middle);
+		align-items: center;
+		height: 100vh;
+	}
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.save {
+		padding: 0 var(--space-small);
+	}
+	.close {
+		background-color: transparent;
+		position: absolute;
+		right: var(--space-middle);
+		top: var(--space-middle);
+	}
 }
