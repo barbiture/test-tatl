@@ -1,0 +1,25 @@
+button {
+  background-color: var(--color-brand);
+  font-size: var(--font-size-md);
+  line-height: var(--font-height-md);
+  color: var(--color-primary);
+  border-radius: var(--radius-md);
+  font-weight: 100;
+  text-align: center;
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+  box-shadow: var(--shadow-button);
+  border: none;
+  cursor: pointer;
+  transition: all 1s ease;
+  justify-content: center;
+  &:hover {
+    background-color: var(--color-hover);
+  }
+  &.active,
+  &:active {
+      box-shadow: var(--shadow-blur);
+      filter: blur(var(--text-blur));
+  }
+}

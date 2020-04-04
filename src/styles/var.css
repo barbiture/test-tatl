@@ -1,0 +1,20 @@
+:root {
+	--regType: 'Nunito', sans-serif;
+  --color-primary: #EEEAFF;
+  --color-brand: #07CCFF ;
+  --color-hover: #73E2FF;
+  --color-active: #00C8FC;
+  --color-error: #FF9696;
+  --color-success: #4CCF51;
+  --color-white: #FFF;
+  --color-white-opacity: rgba(255,255,255,.9);
+  --font-size-md: 64px;
+  --font-height-md: 87px;
+  --space-small: 30px;
+  --space-middle: 60px;
+  --space-large: 170px;
+  --shadow-button: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-blur: 0px 0px 25px var(--color-active);
+  --text-blur: 5px;
+  --radius-md: 15px;
+}

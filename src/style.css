@@ -1,0 +1,23 @@
+@import './styles/reset.css';
+@import './styles/var.css';
+@import './styles/ui.css';
+@import './styles/pop-up.css';
+body {
+  max-width: 100vw;
+  height: 100%;
+  font-family: var(--regType);
+  outline: none;
+  color: var(--color-brand);
+  background-color: var(--color-primary);
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 9vw;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-column-gap: 13vw;
+}
